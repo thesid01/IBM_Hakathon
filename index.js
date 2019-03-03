@@ -106,6 +106,9 @@ app.post('/upload', function (req, res, next) {
 
 })
 
-app.listen(3000,function(){
-console.log("Server On");
+// app.listen(3000,function(){
+// console.log("Server On");
+// });
+app.listen(process.env.PORT||5000,function(){
+  console.log("ON BABY!!!!");
 });
