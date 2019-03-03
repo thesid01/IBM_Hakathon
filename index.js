@@ -56,16 +56,16 @@ function analyze(){
       console.log(g);
       g.forEach((y)=>{
         t=false;
-        // var lastChar = [y.length-1];
-        // if(lastChar.localeCompare(".")==0){
-        //     y = y.substring(0, y.length - 1);
-        //   }
         output.entities.forEach((x)=>{
           var fg=x.length;
            if(y.localeCompare(x.text)==0){
             console.log("hey");
             h.push("***********");
             t=true;
+          }else if((y).localeCompare(x.text+".")==0){
+             console.log("hey");
+              h.push("*******");
+              t=true;
           }else{
             console.log(y+" "+x.text);
           }
