@@ -51,14 +51,15 @@ function analyze(){
       var t=false;
       output =response;
       console.log(output);
+      text = text.replace(".", " ");
       g = text.split(/[\s,]+/);
       console.log(g);
       g.forEach((y)=>{
         t=false;
-        var lastChar = y[y.length -1];
-        if(lastChar.localeCompare(".")==0){
-            y = y.substring(0, y.length - 1);
-          }
+        // var lastChar = [y.length-1];
+        // if(lastChar.localeCompare(".")==0){
+        //     y = y.substring(0, y.length - 1);
+        //   }
         output.entities.forEach((x)=>{
           var fg=x.length;
            if(y.localeCompare(x.text)==0){
@@ -106,9 +107,6 @@ app.post('/upload', function (req, res, next) {
 
 })
 
-// app.listen(3000,function(){
-// console.log("Server On");
-// });
-app.listen(process.env.PORT||5000,function(){
-  console.log("ON BABY!!!!");
+app.listen(3000,function(){
+console.log("Server On");
 });
