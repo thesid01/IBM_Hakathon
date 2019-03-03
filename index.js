@@ -10,33 +10,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-
-
-
-
-
-
-
-
-
-
-
-
 var text = "Rep: This is Himanshu. How can I help you? Caller: This is Alex. I want to change my plan to corporate plan Rep: Sure, I can help you. Do you want to change the plan for the number from which you are calling now? Caller: yes Rep: For verification purpose may I know your date of birth and email id Caller: My data of birth is 10-Aug-1979 and my email id is alex@gmail.com Rep: Which plan do you want to migrate to Caller: Plan 450 unlimited Rep: Can I have your company name and date of joining Caller: I work for IBM and doj 01-Feb-99 Rep: Ok.. I have taken your request to migrate plan to 450 unlimited. You will get an update in 3 hours. Is there anything else that I can help you with Caller: No Rep: Thanks for calling Vodaphone. Have a good day. Caller: you too',"
 var output = {};
 var answer="";
 var sss;
-
-
-
-
-
-
-
-
-
-
-
 
 function analyze(){
 
@@ -130,17 +107,8 @@ app.post('/upload', function (req, res, next) {
 
 });
 
-
-
-
-
-
-
 app.post("/trans",function(req,res){
 	
-
-
-
 	var LanguageTranslatorV3 = require('watson-developer-cloud/language-translator/v3');
 	var languageTranslator = new LanguageTranslatorV3({
 	  version: '2018-05-01',
@@ -183,22 +151,6 @@ app.get("/trans",function(req,res){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.listen(3000,function(){
-console.log("Server On");
+app.listen(process.env.PORT||5000,function(){
+  console.log("ON");
 });
